@@ -1,0 +1,26 @@
+/* Let's get this party started */
+.dropdown ::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+.dropdown  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.dropdown  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    min-height: 20px;
+    background: rgba(122, 119, 119, 0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.dropdown ::-webkit-scrollbar-track-piece {
+    height: 50px;
+}
+.dropdown  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(122, 119, 119, 0.8);
+}
