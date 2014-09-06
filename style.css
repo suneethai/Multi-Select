@@ -1,26 +1,70 @@
-/* Let's get this party started */
-.dropdown ::-webkit-scrollbar {
-    width: 10px;
+/* multiselect-scrollbar */
+
+.multiselect-dropdown ::-webkit-scrollbar {
+  width: 8px;
+} 
+.multiselect-dropdown  ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+} 
+.multiselect-dropdown  ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  min-height: 20px;
+  background: rgba(122, 119, 119, 0.8); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
- 
-/* Track */
-.dropdown  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+.multiselect-dropdown ::-webkit-scrollbar-track-piece {
+  height: 40px;
 }
- 
-/* Handle */
-.dropdown  ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    min-height: 20px;
-    background: rgba(122, 119, 119, 0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+.multiselect-dropdown  ::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(122, 119, 119, 0.8);
 }
-.dropdown ::-webkit-scrollbar-track-piece {
-    height: 50px;
+
+/* multselect-dropdown*/
+.multiselect-block{
+  width: 250px;
+  font-size: 15px;
+  height: 50px;
+  overflow-y: overlay;
+  border: 1px solid rgb(153, 143, 143);
 }
-.dropdown  ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(122, 119, 119, 0.8);
+.multiselect-placeholder{
+  width: inherit;
+  height: inherit;
+  display: table;
+}
+.multiselect-placeholder-text{
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 18px;
+  color: rgb(111, 108, 108);
+}
+.multiselect-placeholder-options ul{
+  list-style:none;
+  margin: 0px 0px 0px 0px !important;
+}
+.multiselect-placeholder-options ul li{
+  margin: 3px 0px 0px 5px !important;
+}
+.multiselect-placeholder-option{
+  border: 1px solid black;
+  background-color: rgb(236, 233, 233);
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1px 1px 1px 1px;
+}
+.option-remove-icon{
+  margin: 3px 0px 0px 0px;
+}
+.option-text{
+  list-style:none;
+  margin: 0px 5px 0 0px;
+}
+.multiselect-dropdown-menu{
+  width:250px;
+  height:200px;
+  overflow-y:overlay;
 }

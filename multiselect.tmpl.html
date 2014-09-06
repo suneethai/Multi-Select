@@ -1,22 +1,22 @@
-<div class="dropdown">
-  <div ng-click="toggleSelect()" ng-disabled="disabled" ng-class="{'error': !valid()}" style="width: 250px;font-size: 15px;height: 35px;overflow: overlay;border: 1px solid rgb(153, 143, 143);">
-    <div ng-switch="placeholder">
-      <div ng-switch-when="true" style="text-align: center;line-height: 30px;font-size: 18px;color: rgb(111, 108, 108);margin-left:-10%">
+<div class="dropdown multiselect-dropdown">
+  <div ng-click="toggleSelect()" class="multiselect-block" ng-disabled="disabled" ng-class="{'error': !valid()}">
+    <div ng-switch="placeholder" class="multiselect-placeholder">
+      <div ng-switch-when="true" class="multiselect-placeholder-text">
         --- Select One ---
       </div>
-      <div ng-switch-when="false">
-        <ul style="list-style:none;margin: 0px 0px 0px 0px !important;">
-          <li ng-repeat="el in els" style="float:left;margin: 3px 3px 5px 1px !important;">
-            <div style="border: 1px solid black;background-color: rgb(236, 233, 233);display: inline-block;border-radius: 10px;">
-              <i ng-click="remove($index,el,event)" style="float:left;margin: 3px 0px 0px 0px;" class="icon-remove icon-small" ng-show="  el!='--- Select One ---'"></i>
-              <div style="list-style:none;float:left;margin: 0px 5px 0 0px;">{{el}}</div>
+      <div ng-switch-when="false" class="multiselect-placeholder-options">
+        <ul>
+          <li ng-repeat="el in els" class="pull-left">
+            <div class="multiselect-placeholder-option">
+              <i ng-click="remove($index,el,event)" class="icon-remove icon-small option-remove-icon pull-left" ng-show="el!='--- Select One ---'"></i>
+              <div class="option-text pull-left">{{el}}</div>
             </div>
           </li>
         <ul>
       </div>
     </div>  
   </div>
-  <ul class="dropdown-menu" style="width:250px;height:200px;overflow-y:overlay">
+  <ul class="dropdown-menu  multiselect-dropdown-menu">
     <li>
       <input class="input-block-level" type="text" ng-model="searchText.label" autofocus="autofocus" placeholder="Filter" />
     </li>     

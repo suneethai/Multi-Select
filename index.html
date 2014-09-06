@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="plunker">
-
+<html ng-app="multiSelectApp">
   <head>
     <meta charset="utf-8" />
-    <title>AngularJS Plunker</title>
+    <title>AngularJS Mulit select</title>
     <link data-require="bootstrap-css@2.3.2" data-semver="2.3.2" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.css" />   
     <link rel="stylesheet" href="style.css" />
     <script data-require="angular.js@1.1.x" src="http://code.angularjs.org/1.1.5/angular.min.js" data-semver="1.1.5"></script>
@@ -12,9 +11,9 @@
     <script src="multiselect.js"></script>
   </head>
   <body ng-controller="MainCtrl">
-    <h3>Multi Select Example</h3> <br>
-    <multiselect multiple="true" ng-model="selectedCar" 
-    options="c for c in cars" change="selected()" >
-    </multiselect>        
+    <div class="container">           
+      <h3>Multi Select control</h3> <br>
+      <multiselect multiple="true" ng-model="selectedCar" options="c for c in cars" change="selected()"></multiselect>
+    </div>
   </body>
 </html>
